@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Spectacles</title>
+        <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+
+        <div id="app" v-cloak>
+            <div class="calendar">
+                <!-- Parfois des journées vides sont nécessaires -->
+                <div class="day"></div>
+                <div class="day"></div>
+                <div class="day"></div>
+                <div class="day"></div>
+                <!-- Classe possible: has-shows -->
+                <!-- Classe possible: selected -->
+                <div class="day">1</div>
+                <div class="day">2</div>
+                <div class="day">3</div>
+                <div class="day has-shows selected">4</div>
+                <div class="day has-shows">5</div>
+                <div class="day">6</div>
+                <div class="day">7</div>
+                <div class="day">8</div>
+                <!-- ... -->
+            </div>
+
+
+            <!-- Lorsqu'une journée est sélectionnée -->
+            <div class="selected-infos">
+
+                <h2>4 Avril 2022</h2>
+
+                <!-- Si aucune représentation est présente pour cette journée -->
+                <!-- <div class="empty">Aucune représentation</div> -->
+
+                <!-- S'il y a des représentations -->
+                <div class="shows">
+                    <!-- Répétition pour chaque représentation -->
+                    <div class="show">
+                        <div class="title">Un titre dynamique</div>
+                        <div class="speaker">Une personne</div>
+                        <div class="location">Une endroit</div>
+                        <div class="description">
+                            Une longue description qui peut<br>
+                            contenir du html!
+                        </div>
+                        <div>
+                            <!-- Classe possible: disabled -->
+                            <div class="book-bt">Réserver</div>
+                            42 places restantes
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <script src="https://unpkg.com/vue@next"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
